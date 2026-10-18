@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Kariermu dengan Gemini Canvas | GSA Universitas Horizon Indonesia</title>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet" />
+    
+    <!-- Link ke External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Mesh Gradient Animation -->
+    <div class="bg-mesh">
+        <div class="blob blob-blue"></div>
+        <div class="blob blob-red"></div>
+        <div class="blob blob-yellow"></div>
+        <div class="blob blob-green"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="logo-text">
+            <span>G</span><span>S</span><span>A</span> Horizon
+        </div>
+        <a href="#register" class="btn btn-nav">Daftar Sekarang</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text fade-in-up">
+            <div class="badge">✨ Hands-on Workshop Interaktif</div>
+            <h1>Canvas Kariermu: <br> <span class="text-gradient">Gemini Canvas</span></h1>
+            <p>Rancang portofolio profesional dan susun deskripsi project teknis secara interaktif menggunakan Gemini Canvas. Bawa laptop atau smartphone kamu!</p>
+            <div class="hero-action">
+                <a href="#register" class="btn btn-primary shadow-glow">Amankan Kursi</a>
+                <a href="#about" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+        <div class="hero-visual fade-in-up delay-1">
+            <div class="glass-card visual-card">
+                <span class="material-symbols-rounded ai-icon">edit_note</span>
+                <h3>Build Portfolio, <br>Side-by-Side.</h3>
+                <div class="code-lines">
+                    <div class="line w-100"></div>
+                    <div class="line w-75"></div>
+                    <div class="line w-50"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Info Bar -->
+    <div class="info-bar-container fade-in-up delay-2">
+        <div class="glass-card info-bar">
+            <div class="info-item">
+                <div class="icon-box blue"><span class="material-symbols-rounded">calendar_month</span></div>
+                <div class="info-text">
+                    <h4>Senin, 19 Oktober 2026</h4>
+                    <p>11:00 WIB - 12:00 WIB</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="info-item">
+                <div class="icon-box red"><span class="material-symbols-rounded">pin_drop</span></div>
+                <div class="info-text">
+                    <h4>Ruang Kelas / Gedung Baru</h4>
+                    <p>Universitas Horizon Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section fade-in-up">
+        <h2 class="section-title">Materi & Manfaat</h2>
+        <p class="section-subtitle">Susun portofolio profesional dan optimalkan struktur project dengan Google AI.</p>
+        
+        <div class="cards-container">
+            <div class="glass-card feature-card border-top-yellow">
+                <span class="material-symbols-rounded feature-icon pulse">description</span>
+                <h3>Deskripsi Project Profesional</h3>
+                <p>Gunakan fitur inline editing Gemini Canvas untuk mengatasi writer's block saat menjelaskan skill dan alur project.</p>
+            </div>
+            <div class="glass-card feature-card border-top-green">
+                <span class="material-symbols-rounded feature-icon pulse delay-1">developer_mode</span>
+                <h3>Optimalisasi Kode Frontend</h3>
+                <p>Dapatkan review dan template struktur kode portofolio langsung di antarmuka Canvas secara realtime.</p>
+            </div>
+            <div class="glass-card feature-card border-top-red">
+                <span class="material-symbols-rounded feature-icon pulse delay-2">devices</span>
+                <h3>Praktik Langsung (Hands-on)</h3>
+                <p>Buat draf awal portofolio di tempat. Terbuka untuk mahasiswa lintas jurusan (IT, Pariwisata, dll).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="form-section" id="register">
+        <div class="glass-card form-card fade-in-up">
+            <div class="kuota-warning" id="kuotaAlert">
+                <span class="material-symbols-rounded">bolt</span>
+                Kuota Eksklusif: Hanya untuk 10 Mahasiswa Tercepat!
+            </div>
+            
+            <div class="form-header">
+                <h2>Form Registrasi</h2>
+                <p>Isi data diri kamu dengan benar.</p>
+            </div>
+
+            <form id="regForm">
+                <div class="input-group">
+                    <input type="text" id="nama" name="nama" placeholder=" " required>
+                    <label for="nama">Nama Lengkap</label>
+                    <span class="material-symbols-rounded input-icon">person</span>
+                </div>
+                <!-- Input Email dengan span error -->
+                <div class="input-group" id="emailGroup">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Kampus</label>
+                    <span class="material-symbols-rounded input-icon">mail</span>
+                    <small id="emailError" class="error-text">Gunakan email kampus Horizon</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                    <span class="spinner" id="spinner"></span>
+                    <span id="btnText">Daftar Sekarang</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success / Join Group Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="glass-card modal-content">
+            <div class="modal-header-step">
+                <span class="material-symbols-rounded modal-icon success-icon">check_circle</span>
+                <div class="step-badge">Langkah Terakhir!</div>
+            </div>
+            <h2>Pendaftaran Berhasil</h2>
+            <p class="modal-desc">Satu langkah lagi! Kamu <strong>WAJIB</strong> bergabung ke grup peserta untuk mendapatkan info:</p>
+            
+            <ul class="benefit-list">
+                <li><span class="material-symbols-rounded">devices</span> Persiapan Bawa Perangkat (Laptop/HP)</li>
+                <li><span class="material-symbols-rounded">military_tech</span> Informasi Workshop & E-Certificate</li>
+            </ul>
+            
+            <!-- LINK GRUP WHATSAPP -->
+            <a href="https://chat.whatsapp.com/JzaxNor66M19OFIMV1zAGd?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="btn btn-whatsapp w-100" id="joinGroupBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 415.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                Join Grup WhatsApp
+            </a>
+            
+            <button class="btn btn-outline w-100 mt-3" onclick="closeModal()">Tutup (Saya sudah join)</button>
+        </div>
+    </div>
+
+    <!-- Link ke External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
