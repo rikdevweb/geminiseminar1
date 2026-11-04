@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailError = document.getElementById('emailError');
 
     // URL GOOGLE APPS SCRIPT (Pastikan ini URL hasil Deployment TERBARU)
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxDWMqgtzzX3TUGq5LUGyhLM-65UwSOoVtQNAEjVGqoth_ItXRwPh6aWIMWTMIL8LB9kw/exec'; 
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzf6R4SaCQCI374b3vaK3W7nxZq7pfr-hflwbK474Y6EcoTSyusORm2hJDZ39ud0Q2_AQ/exec'; 
 
     // Hilangkan error merah saat user mulai mengetik ulang email
     if (emailInput) {
